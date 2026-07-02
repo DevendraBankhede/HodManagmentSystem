@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Dashboard</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body class="bg-light">
+
+<div class="d-flex">
+
+  <!-- Sidebar -->
+  <div class="bg-primary text-white p-3 vh-100" style="width: 250px;">
+    <h4 class="text-center mb-4">Admin Panel</h4>
+
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link text-white" id="dash"><i class="fa fa-home me-2"></i>Dashboard</a></li>
+      <li class="nav-item"><a class="nav-link text-white" id="teachers"><i class="fa fa-user-tie me-2"></i>Teachers</a></li>
+      <li class="nav-item"><a class="nav-link text-white" id="students"><i class="fa fa-users me-2"></i>Students</a></li>
+      <li class="nav-item"><a class="nav-link text-white" id="attendance"><i class="fa fa-check me-2"></i>Attendance</a></li>
+      <li class="nav-item"><a class="nav-link text-white" id="notices"><i class="fa fa-bullhorn me-2"></i>Notices</a></li>
+      <li class="nav-item"><a class="nav-link text-white" id="reports"><i class="fa fa-chart-bar me-2"></i>Reports</a></li>
+      <li class="nav-item"><a class="nav-link text-danger" id="logout"><i class="fa fa-sign-out-alt me-2"></i>Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main -->
+  <div class="flex-grow-1 p-4">
+
+    <h3>Welcome, Admin 👋</h3>
+
+    <!-- Cards -->
+    <div class="row g-3 mt-2">
+      <div class="col-md-3">
+        <div class="card shadow-sm text-center">
+          <div class="card-body">
+            <h6>Total Students</h6>
+            <h3>520</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm text-center">
+          <div class="card-body">
+            <h6>Total Teachers</h6>
+            <h3>45</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm text-center">
+          <div class="card-body">
+            <h6>Attendance</h6>
+            <h3 class="text-success">89%</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm text-center">
+          <div class="card-body">
+            <h6>Total Notices</h6>
+            <h3>12</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notices + Chart -->
+    <div class="row mt-5">
+
+      <!-- Notices -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5>Recent Notices</h5>
+            <ul>
+              <li>Annual Sports Day</li>
+              <li>PTM Meeting</li>
+              <li>Summer Vacation</li>
+              <li>Exam Schedule</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5>Attendance Overview</h5>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- External JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
